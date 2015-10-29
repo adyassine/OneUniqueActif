@@ -1,2 +1,2 @@
-OneUniqueActif allows you to have only one active field
+OneUniqueActif allows you to have only one entry with active status
 
