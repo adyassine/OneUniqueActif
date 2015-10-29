@@ -8,7 +8,7 @@ use AppBundle\Validator\Constraints\ContainsOneActif;
  * @ORM\Entity()
  * @ContainsOneActif
  */
-class Alert
+class MyEntity
 {
     // your code here
 }
