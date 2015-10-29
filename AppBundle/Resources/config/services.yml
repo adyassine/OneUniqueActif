@@ -1,0 +1,6 @@
+services:
+    validator.unique.actif:
+        class: AppBundle\Validator\Constraints\ContainsOneActifValidator
+        arguments: [@doctrine.orm.entity_manager, "AppBundle\Entity\MyEntity", "MyBooleanField"]
+        tags:
+          - { name: validator.constraint_validator, alias: unique_actif }                 

@@ -1,2 +1,2 @@
-# OneUniqueActif
-Validation of entity to accept one entry with actif status
+OneUniqueActif allows you to have only one active field
+
