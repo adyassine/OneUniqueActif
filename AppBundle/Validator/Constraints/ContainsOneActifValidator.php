@@ -25,10 +25,13 @@ class ContainsOneActifValidator extends ConstraintValidator
 
     public function validate($object, Constraint $constraint)
     {
-        $result = $this->entityManager->getRepository($this->class)
-                ->findOneBy(array($this->field => true));
-        if ($result  != null && $result->getIsActif() != false) {
-            $this->context->addViolationAt($this->field , $constraint->message);
+       $result = $this->entityManager->getRepository($this->class)
+                ->findOneBy(array(
+                    $this->field => true,
+                ));
+
+        if ($result != null && $object->getIsActif() && $result->getId() != $object->getId()) {
+            $this->context->addViolationAt($this->field, $constraint->message);
             return false;
         }
         return true;
